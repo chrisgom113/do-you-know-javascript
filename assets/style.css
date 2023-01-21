@@ -7,9 +7,17 @@ header {
     flex-wrap: wrap;
 }
 
+header h2 {
+    font-size: larger;
+}
 
+header h4 {
+    font-weight: lighter;
+}
 
-
+h1 {
+    margin-bottom: 25px;
+}
 
 /* class selectors */
 
@@ -19,3 +27,31 @@ header {
 
 
 }
+
+.card {
+    height: 75%;
+    display: flex;
+    flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+padding: 100px;
+line-height: 30px;
+font-size: 25px;
+text-align: center;
+}
+
+.card p {
+    margin: 0 200px 40px;
+}
+
+.start-btn {
+    padding: 15px;
+    border-radius: 10px;
+    border-color: rgb(33, 4, 51);
+    background-color: rgb(33, 4, 51);
+    color: white;
+}
+
+/* id selectors */
+
+
