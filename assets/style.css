@@ -1,3 +1,21 @@
 * {
     border: 3px solid red;
 }
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+/* class selectors */
+
+.timer {
+    display: flex;
+  margin-left: auto;
+
+
+}
