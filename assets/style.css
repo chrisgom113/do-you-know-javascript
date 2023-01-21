@@ -1,5 +1,5 @@
 * {
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 header {
@@ -9,6 +9,8 @@ header {
 
 header h2 {
     font-size: larger;
+    margin-top: 15px;
+    margin-left: 15px;
 }
 
 header h4 {
@@ -18,6 +20,7 @@ header h4 {
 h1 {
     margin-bottom: 25px;
 }
+
 
 /* class selectors */
 
@@ -52,6 +55,12 @@ text-align: center;
     color: white;
 }
 
+
+
 /* id selectors */
 
 
+/* media selectors */
+@media .start-btn {
+
+}
