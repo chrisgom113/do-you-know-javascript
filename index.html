@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/reset.css"/>
+    <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href=".//assets/style.css" />
     <title>Javascript Quiz</title>
 </head>
@@ -21,22 +21,31 @@
         <section id="landing-page">
             <card class="card">
                 <h1>Javascript Quiz</h1>
-                <p>Take a shot at answering the following questions about Javascript. You have 60 seconds to answer all 5 questions.
-                    Oh yeah, every question you get wrong penalizes your score and you lose 10 seconds! Let's see if you've been
+                <p>Take a shot at answering the following questions about Javascript. You have 60 seconds to answer all
+                    5 questions.
+                    Oh yeah, every question you get wrong penalizes your score and you lose 10 seconds! Let's see if
+                    you've been
                     paying attention in class! Good luck!
                 </p>
                 <button id="start-quiz" class="start-btn">Start Quiz</button>
             </card>
         </section>
-       
-       
-        <!-- 5 card elements for 5 separate questions related to Javascript  -->
-        <section id="question-cards">
-            <card></card>
-           
+
+
+        <!-- Section with Multiple Choice Questions. To be called through javascript Indexing  -->
+        <section id="questions" class="hide">
+            <h1>Question</h1>
+            <card id="multiple-choices" class="answers">
+                <button>First Choice</button>
+                <button>Second Choice</button>
+                <button>Third Choice</button>
+                <button>Fourth Choice</button>
+            </card>
+            <h2 class="hide">Wrong or Right</h2>
+            <button class="hide">Next Question</button>
         </section>
 
-       
+
         <!-- Closing card elements - 'All done!' , 'Enter initials', 'View High scores' -->
         <section>
             <card></card>
