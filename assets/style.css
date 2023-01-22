@@ -53,14 +53,16 @@ text-align: center;
     border-color: rgb(33, 4, 51);
     background-color: rgb(33, 4, 51);
     color: white;
+    cursor: pointer;
 }
 
+.start-btn:hover {
+    /* background-color: crimson; */
+    box-shadow: 0 5px 15px rgb(33, 4, 51);
 
+}
 
 /* id selectors */
 
 
 /* media selectors */
-@media .start-btn {
-
-}
