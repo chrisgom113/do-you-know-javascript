@@ -33,7 +33,7 @@ var questionIndex = [
         ]
     },
     {
-        question: "This tool is extremely useful for degbugging javascript errors when creating javascript code",
+        question: "This tool is extremely useful for degbugging javascript errors when creating javascript code:",
         choices: [
             { text: "function expression", right: false },
             { text: "append.Child", right: false },
@@ -42,7 +42,7 @@ var questionIndex = [
         ]
     },
     {
-        question: "Which of the below choices is not a javascript datatype?",
+        question: "Which of the below choices is NOT a javascript datatype?",
         choices: [
             { text: "numerical", right: false },
             { text: "freudian", right: true },

@@ -10,9 +10,22 @@ header {
 }
 
 header h2 {
-    font-size: larger;
+    font-size: large;
     margin-top: 15px;
     margin-left: 15px;
+}
+
+header h2:hover {
+    scale: 110%;
+    cursor: pointer;
+    color: rgb(167, 150, 54);
+    box-shadow: 0 5px 15px rgb(167, 150, 54);
+    border-radius: 5px;
+  
+}
+
+header h2:active {
+    transform: translateY(4px);
 }
 
 
@@ -59,7 +72,7 @@ button:active {
 
 .card {
     height: 75%;
-    display: flex;
+    display: inline-block;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -84,6 +97,11 @@ button:active {
     background-color: rgb(33, 4, 51);
     color: white;
     cursor: pointer;
+}
+
+.question {
+    line-height: 50px;
+
 }
 
 
