@@ -34,20 +34,23 @@
 
         <!-- Section with Multiple Choice Questions. To be called through javascript Indexing  -->
         <section id="questions" class="hide">
-            <h1>Question</h1>
+            <h1 id="question-text">Question</h1>
             <card id="multiple-choices" class="answers">
-                <button>First Choice</button>
-                <button>Second Choice</button>
-                <button>Third Choice</button>
-                <button>Fourth Choice</button>
+                <button class="btn">First Choice</button>
+                <button class="btn">Second Choice</button>
+                <button class="btn">Third Choice</button>
+                <button class="btn">Fourth Choice</button>
             </card>
-            <h2 class="hide">Wrong or Right</h2>
-            <button class="hide">Next Question</button>
+
+            <h2 id="check-answer" class="hide">Wrong or Right</h2>
+            <div class="checks">
+                <button id="next-question" class="hide">Next Question</button>
+            </div>
         </section>
 
 
         <!-- Closing card elements - 'All done!' , 'Enter initials', 'View High scores' -->
-        <section>
+        <section id="stats" class="hide">
             <card></card>
             <card></card>
             <card></card>
