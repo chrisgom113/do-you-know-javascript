@@ -51,9 +51,13 @@
 
         <!-- Closing card elements - 'All done!' , 'Enter initials', 'View High scores' -->
         <section id="stats" class="hide">
-            <card></card>
-            <card></card>
-            <card></card>
+            <form id="submit-score">
+                <h2 id="score"></h2>
+                <label id="initials">Enter your intials to save your score:</label>
+                <input type="text" id="input-initials" maxlength="3" placeholder="Enter your intials here" />
+                <button id="submit-btn">Send Score</button>
+            </form>
+            
         </section>
     </main>
     <script src="./assets/script.js"></script>
