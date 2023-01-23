@@ -205,7 +205,7 @@ function endQuiz() {
     setTimeout(function () {
         questionDisplay.classList.add("hide");
         document.getElementById("stats").classList.remove("hide");
-        document.getElementById("score").textContent = "You finished with " + secondsLeft + " seconds left";
+        document.getElementById("score").textContent = "You finished with " + secondsLeft + " seconds left!";
     }, 3000)
 };
 
@@ -239,7 +239,7 @@ function viewHighScores(initials) {
     questionDisplay.classList.add("hide");
     if (typeof initials == "string") {
         var score = {
-            initials, secondsleft
+            initials, secondsLeft
         }
         scores.push(score)
     }
