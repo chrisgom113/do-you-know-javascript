@@ -13,7 +13,7 @@
 <body>
     <header>
         <h2 style="display:flex" id="view-high-scores">View high scores</h2>
-        <h4 id="countdown" class="timer">Time: 60</h4>
+        <h3 id="countdown" class="timer">Time: 60</h3>
     </header>
 
     <main>
@@ -21,11 +21,10 @@
         <section id="landing-page">
             <card class="card">
                 <h1>Javascript Quiz</h1>
-                <p>Take a shot at answering the following questions about Javascript. You have 60 seconds to answer all
-                    5 questions.
-                    Oh yeah, every question you get wrong penalizes your score and you lose 10 seconds! Let's see if
-                    you've been
-                    paying attention in class! Good luck!
+                <p>Answer the following questions about Javascript. You have 60 seconds to answer all
+                    5 questions. The number of seconds you have at the end will be your score.
+                    Oh yeah, if you get one wrong, you lose 10 seconds! Let's see if
+                    you've been paying attention in class! Good luck!
                 </p>
                 <button id="start-quiz" class="start-btn">Start Quiz</button>
             </card>
@@ -33,7 +32,7 @@
 
 
         <!-- Section with Multiple Choice Questions. To be called through javascript Indexing  -->
-        <section id="questions" class="hide">
+        <section id="questions" class="hide card">
             <h1 id="question-text">Question</h1>
             <card id="multiple-choices" class="answers">
                 <button class="btn">First Choice</button>
@@ -44,7 +43,7 @@
 
             <h2 id="check-answer" class="hide">Wrong or Right</h2>
             <div class="checks">
-                <button id="next-question" class="hide">Next Question</button>
+                <button id="next-question" class="hide next-btn">Next Question</button>
             </div>
         </section>
 

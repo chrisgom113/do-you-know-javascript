@@ -1,6 +1,8 @@
-* {
-    /* border: 3px solid red; */
+:root {
+    --purple-button-color: rgb(33, 4, 51);
+    --hover-shadow-color: crimson;
 }
+
 
 header {
     display: flex;
@@ -13,9 +15,6 @@ header h2 {
     margin-left: 15px;
 }
 
-header h4 {
-    font-weight: lighter;
-}
 
 h1 {
     margin-bottom: 25px;
@@ -27,7 +26,7 @@ button {
     width: auto;
     overflow: visible;
     padding: 10px;
-    background-color: rgb(33, 4, 51);
+    background-color: var(--purple-button-color);
     border-radius: 10px;
     font-size: large;
     margin: 10px;
@@ -36,8 +35,12 @@ button {
 }
 
 button:hover {
-    box-shadow: 0 5px 15px crimson;
+    box-shadow: 0 5px 15px var(--hover-shadow-color);
 
+}
+
+button:active {
+    transform: translateY(4px);
 }
 
 
@@ -48,6 +51,8 @@ button:hover {
     margin-left: auto;
     margin-right: 15px;
     margin-top: 15px;
+    font-weight: lighter;
+    letter-spacing: 1px;
 
 
 }
@@ -81,6 +86,7 @@ button:hover {
     cursor: pointer;
 }
 
+
 .btn.right {
     background-color: green;
 
@@ -91,10 +97,7 @@ button:hover {
 
 }
 
-.start-btn:hover {
-    box-shadow: 0 5px 15px crimson;
 
-}
 
 .answers {
 
@@ -118,3 +121,10 @@ button:hover {
 
 
 /* media selectors */
+@media screen and (max-width: 575px) {
+    .answers {
+      grid-template-columns: repeat(1, auto);
+      gap: 0;
+      margin: 0;
+    }
+  }

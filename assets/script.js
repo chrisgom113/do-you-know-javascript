@@ -1,5 +1,5 @@
 
-// Set up variables and document references
+// Set up variables and ID references
 
 var timerEl = document.getElementById("countdown");
 var startQuizBtn = document.getElementById("start-quiz");
@@ -73,16 +73,31 @@ var questionIndex = [
 
 // Button event listeners
 startQuizBtn.addEventListener("click", beginQuiz);
+
 nextQuestionBtn.addEventListener("click", () => {
     current++
     showNextQuestion()
 });
 
+highScoresLink.addEventListener("click", viewHighScores);
+
+submitScore.addEventListener("click", function (event) {
+    event.preventDefault()
+    var initials = document.querySelector("#input-initials").value;
+    viewHighScores(initials);
+});
+
+restartBtn.addEventListener("click", function () {
+    window.location.reload();
+});
+
+clearScoresBtn.addEventListener("click", function () {
+    localStorage.clear();
+    document.getElementById("best").innerHTML = "";
+});
 
 
 // defined functions
-
-
 function timer() {
     secondsLeft--;
     timerEl.textContent = "Time: " + secondsLeft;
@@ -93,10 +108,9 @@ function timer() {
     }
 };
 
-
 function beginQuiz() {
     countdown = setInterval(timer, 1000);
-    
+
     landingPage.classList.add("hide");
 
     randomLoad = questionIndex.sort(() => Math.random() - .5)
@@ -114,11 +128,9 @@ function showNextQuestion() {
     showMeQuestion(randomLoad[current]);
 };
 
-
-
 function showMeQuestion(question) {
     questionText.innerText = question.question;
-    
+
     question.choices.forEach(answer => {
         var button = document.createElement("button")
         button.innerText = answer.text;
@@ -148,11 +160,11 @@ function chooseAnswer(event) {
     var right = chosenAnswer.dataset.right;
     checkAnswerEl.classList.remove("hide")
 
-    if(right) {
+    if (right) {
         checkAnswerEl.innerHTML = "That's Correct. NICE!";
     } else {
         checkAnswerEl.innerHTML = "Wrong answer!";
-        if (secondsLeft <=10) {
+        if (secondsLeft <= 10) {
             secondsLeft = 0;
         } else {
             secondsLeft -= 10;
@@ -174,7 +186,7 @@ function chooseAnswer(event) {
 
 function showStanding(element, right) {
     removeStanding(element)
-    if(right) {
+    if (right) {
         element.classList.add("right")
 
     } else {
@@ -182,8 +194,7 @@ function showStanding(element, right) {
     }
 }
 
-
-function removeStanding (element) {
+function removeStanding(element) {
     element.classList.remove("right");
     element.classList.remove("wrong");
 }
@@ -195,11 +206,11 @@ function endQuiz() {
         questionDisplay.classList.add("hide");
         document.getElementById("stats").classList.remove("hide");
         document.getElementById("score").textContent = "You finished with " + secondsLeft + " seconds left";
-    },3000)
+    }, 3000)
 };
 
 var saveScores = function () {
-    if(!legendBoard) {
+    if (!legendBoard) {
         return false;
     }
 
@@ -233,39 +244,23 @@ function viewHighScores(initials) {
         scores.push(score)
     }
 
-var bestScore = document.getElementById("best");
-bestScore.innerHTML = "";
+    var bestScore = document.getElementById("best");
+    bestScore.innerHTML = "";
 
-for (i = 0; i < scores.length; i++) {
-    var topOne = document.createElement("div");
-    topOne.setAttribute("class", "name-div");
-    topOne.innerText = scores[i].initials;
-    var nextOne = document.createElement("div");
-    nextOne.setAttribute("class", "score-div");
-    nextOne.innerText = scores[i].secondsLeft;
+    for (i = 0; i < scores.length; i++) {
+        var topOne = document.createElement("div");
+        topOne.setAttribute("class", "name-div");
+        topOne.innerText = scores[i].initials;
+        var nextOne = document.createElement("div");
+        nextOne.setAttribute("class", "score-div");
+        nextOne.innerText = scores[i].secondsLeft;
 
-    bestScore.appendChild(topOne);
-    bestScore.appendChild(nextOne);
-}
+        bestScore.appendChild(topOne);
+        bestScore.appendChild(nextOne);
+    }
 
-localStorage.setItem("scores", JSON.stringify(scores));
+    localStorage.setItem("scores", JSON.stringify(scores));
 
 };
 
-highScoresLink.addEventListener("click", viewHighScores);
 
-submitScore.addEventListener("click", function (event) {
-    event.preventDefault()
-    var initials = document.querySelector("#input-initials").value;
-    viewHighScores(initials);
-});
-
-restartBtn.addEventListener("click", function () {
-    window.location.reload();
-});
-
-
-clearScoresBtn.addEventListener("click", function () {
-    localStorage.clear();
-    document.getElementById("best").innerHTML = "";
-});
