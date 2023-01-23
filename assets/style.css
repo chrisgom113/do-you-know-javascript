@@ -1,9 +1,10 @@
+/* set button colors asnd pseudo element glow at root level */
 :root {
     --purple-button-color: rgb(33, 4, 51);
     --hover-shadow-color: crimson;
 }
 
-
+/* ELEMENT selectors */
 header {
     display: flex;
     flex-wrap: wrap;
@@ -60,7 +61,7 @@ label {
 }
 
 
-/* class selectors */
+/* CLASS selectors */
 
 .timer {
     display: flex;
@@ -119,8 +120,6 @@ label {
     text-decoration: line-through;
 }
 
-
-
 .answers {
 
     display: grid;
@@ -156,17 +155,29 @@ label {
 }
 
 
-/* id selectors */
+/* ID selectors */
 #check-answer {
     color: gray;
     font-style: italic;
 }
 
-/* media selectors */
+/* media selectors for responsiveness */
 @media screen and (max-width: 575px) {
     .answers {
         grid-template-columns: repeat(1, auto);
         gap: 0;
         margin: 0;
+
     }
+
+    .card {
+        display:flex;
+        flex-wrap:wrap;
+    }
+
+    .hide {
+        display: none;
+    }
+
+
 }
