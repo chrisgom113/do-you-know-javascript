@@ -35,7 +35,6 @@ h1 {
 
 button {
     font-family: Arial, Helvetica, sans-serif;
-    border;
     width: auto;
     overflow: visible;
     padding: 10px;
@@ -116,7 +115,7 @@ label {
 }
 
 .btn.wrong {
-    background-color: red;
+    background-color: rgb(185, 25, 75);
     text-decoration: line-through;
 }
 
