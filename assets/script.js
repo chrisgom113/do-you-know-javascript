@@ -187,6 +187,7 @@ function endQuiz() {
     setTimeout(function () {
         questionDisplay.classList.add("hide");
         document.getElementById("stats").classList.remove("hide");
-        document.getElementById("score").textContent = "You finished with " + secondsLeft;
-    },2000)
+        document.getElementById("score").textContent = "You finished with " + secondsLeft + " seconds left";
+    },3000)
 };
+
