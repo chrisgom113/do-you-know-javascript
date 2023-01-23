@@ -21,7 +21,7 @@ header h2:hover {
     color: rgb(167, 150, 54);
     box-shadow: 0 5px 15px rgb(167, 150, 54);
     border-radius: 5px;
-  
+
 }
 
 header h2:active {
@@ -110,13 +110,14 @@ label {
 
 
 .btn.right {
-    background-color: green;
+    background-color: rgb(57, 131, 57);
+
 
 }
 
 .btn.wrong {
     background-color: red;
-
+    text-decoration: line-through;
 }
 
 
@@ -139,14 +140,34 @@ label {
 
 }
 
-/* id selectors */
+.legendBoard {
+    text-transform: uppercase;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    border: 3px solid black;
+    background-image: radial-gradient(circle at center, purple 0, crimson, purple 90%);
+}
 
+.name,
+.score {
+    flex: 1 35%;
+    padding: 10px 0;
+    border: 1px solid black;
+}
+
+
+/* id selectors */
+#check-answer {
+    color: gray;
+    font-style: italic;
+}
 
 /* media selectors */
 @media screen and (max-width: 575px) {
     .answers {
-      grid-template-columns: repeat(1, auto);
-      gap: 0;
-      margin: 0;
+        grid-template-columns: repeat(1, auto);
+        gap: 0;
+        margin: 0;
     }
-  }
+}

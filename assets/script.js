@@ -206,7 +206,7 @@ function endQuiz() {
         questionDisplay.classList.add("hide");
         document.getElementById("stats").classList.remove("hide");
         document.getElementById("score").textContent = "You finished with " + secondsLeft + " seconds left!";
-    }, 3000)
+    }, 1000)
 };
 
 var saveScores = function () {
@@ -234,7 +234,7 @@ var saveScores = function () {
 
 function viewHighScores(initials) {
     document.getElementById("legends").classList.remove("hide")
-    document.getElementById("stats").classList.remove("hide");
+    document.getElementById("stats").classList.add("hide");
     landingPage.classList.add("hide");
     questionDisplay.classList.add("hide");
     if (typeof initials == "string") {
@@ -249,10 +249,10 @@ function viewHighScores(initials) {
 
     for (i = 0; i < scores.length; i++) {
         var topOne = document.createElement("div");
-        topOne.setAttribute("class", "name-div");
+        topOne.setAttribute("class", "name");
         topOne.innerText = scores[i].initials;
         var nextOne = document.createElement("div");
-        nextOne.setAttribute("class", "score-div");
+        nextOne.setAttribute("class", "score");
         nextOne.innerText = scores[i].secondsLeft;
 
         bestScore.appendChild(topOne);
