@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <h2 style="display:flex">View high scores</h2>
+        <h2 style="display:flex" id="view-high-scores">View high scores</h2>
         <h4 id="countdown" class="timer">Time: 60</h4>
     </header>
 
@@ -60,13 +60,13 @@
 
         </section>
 
-        <section>
-            <card>
+        <section class="hide" id="legends">
+            <card id="javascript-legends">
                 <h1>Javascript Legends</h1>
-                <div></div>
+                <div id="best"></div>
                 <div>
-                    <button>Try Again</button>
-                    <button>Clear Legends Board</button>
+                    <button id="start-over">Try Again</button>
+                    <button id="clear-legend">Clear Legends Board</button>
                 </div>
             </card>
         </section>
