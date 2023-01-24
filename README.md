@@ -64,10 +64,10 @@ Screenshots below depict some of the look/feel and functionality of the web app.
 
 The following websites were integral in acting as as resource to help facilitate my understanding and implementation of the code in this challenge:
 
-superdevresources.com
-tympanus.net/Development/CreativeButtons/
-w3schools.com
-developer.mozilla.org
+- superdevresources.com
+- tympanus.net/Development/CreativeButtons/
+- w3schools.com
+- developer.mozilla.org
 
 and last but not least...
 
